@@ -3,7 +3,7 @@ import SignUp from './signUp/SignUp'
 import SignIn from './signIn/SignIn';
 import { Container, OverlayContainer, Overlay, SignUpContainer, SignInContainer, OverlayRight, OverlayLeft, GhostBtn, InfoText } from './style'
 
-function AccountPage() {
+function Registration() {
     const [isRightPanelActive, setRightPanelActive] = useState(false);
 
     const handleSignUpClick = () => {
@@ -14,11 +14,8 @@ function AccountPage() {
         setRightPanelActive(false);
       };
 
-
-      console.log(isRightPanelActive)
-  return (
-    <Container 
-    >
+    return (
+    <Container>
         <SignUpContainer property={isRightPanelActive}>
             <SignUp />
         </SignUpContainer>
@@ -44,5 +41,5 @@ function AccountPage() {
   );
 }
 
-export default AccountPage
+export default Registration
 

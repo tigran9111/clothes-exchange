@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import auth from '../../firebase';
+import {auth} from '../../firebase';
 import { FormWrapper, FormInput, SignInBtn, MainForm} from './style'
 
 function SignIn() {
@@ -14,7 +14,7 @@ function SignIn() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       // Redirect to the main page after successful login
-      navigate('/main');
+      navigate('/profile');
     } catch (error) {
       console.error('Error logging in:', error.message);
       // Handle login error, display error message, etc.

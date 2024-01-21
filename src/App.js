@@ -1,15 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AccountPage from './account/AccountPage';
+import Registration from './registration/Registration';
 import MainPage from './main/MainPage';
+import Profile from './account/Profile';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/account" element={<AccountPage />} />
-        <Route path="/main" element={< MainPage />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/main" element={<MainPage />} />
       </Routes>
     </Router>
     

@@ -1,113 +1,91 @@
 
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-  width: 768px;
-  max-width: 100%;
-  min-height: 480px;
-  margin: auto;
-`;
-
-export const FormContainer = styled.div`
-  position: absolute;
-  top: 0;
-  height: 100%;
-  transition: all 0.6s ease-in-out;
-`;
-
-export const SignUpContainer = styled(FormContainer)`
-  left: 0;
-  width: 50%;
-  opacity: ${props => props.property ? '1' : '0'};
-  z-index: ${props => props.property ? '5' : '1'};
-  transform: ${props => props.property && 'translateX(100%)'}
-`;
-
-export const SignInContainer = styled(FormContainer)`
-  left: 0;
-  width: 50%;
-  z-index: 1;
-  transform: ${props => props.property && 'translateY(100%)'}
+export const ProfileContainer = styled.div`
+    height: 100%;
+    padding: 60px;
 
 `;
 
-export const OverlayContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  transition: transform 0.6s ease-in-out;
-  z-index: 100;
-  transform: ${props => props.property && 'translateX(-100%)'}
-
+export const ProfileInfo = styled.div`
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin: 24px 0;
 `;
 
-export const Overlay = styled.div`
-  background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
-  color: #fff;
-  position: relative;
-  left: -100%;
-  height: 100%;
-  width: 200%;
-  transform: translateY(0);
-  transition: transform 0.6s ease-in-out;
-  transform: ${props => props.property && 'translateX(50%)'}
-
+export const ProfileTitle = styled.h3`
+    font-size: 24px;
 `;
 
-export const OverlayPanel = styled.div`
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 50%;
-  text-align: center;
-  transform: translateY(0);
-  transition: transform 0.6s ease-in-out;
-`;
-
-export const OverlayRight = styled(OverlayPanel)`
-  right: 0;
-  transform: ${props => props.property ? 'translateY(20%)' : 'translateY(0%)' }
-`;
-
-export const OverlayLeft = styled(OverlayPanel)`
-    transform: ${props => props.property ? 'translateY(0%)' : 'translateY(-20%)' }
-`;
-
-export const InfoText = styled.p`
-    font-size: 16px;
-    line-height: 1.6;
-    padding: 0 16px;
+export const ProfileAvatar = styled.div`
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: red;
 `
 
-export const RegisterBtn = styled.button`
+export const ProfileAvatarImg =styled.img`
+    width: 100%;
+`
+
+export const UploadInput = styled.button`
+    height: 32px;
+    position: relative;
+    padding: 0 16px;
     border-radius: 20px;
     border: 1px solid #ff4b2b;
     background: #ff445c;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
-    padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
+    margin-top: 24px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 8px 0 0;
+`
+
+export const UploadButton = styled.button`
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 16px;
+    border: 1px solid #ff4b2b;
+    background: #ff445c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    text-align: center;
     cursor: pointer;
 `
 
-export const GhostBtn = styled(RegisterBtn)`
-    margin-top: 24px;
-    background: transparent;
-    border-color: #fff;
+export const ImagesContainer = styled.div`
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-template-rows: 400px;
+    gap: 12px;
 `
 
+export const ItemCard =styled.div`
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    background-color: rgb(146 151 179 / 13%);
+    border-radius: 14px;
+    border: 1px solid rgba(16 18 27 / 40%);
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+        transform: scale(1.02);
+        background-color: rgba(16 18 27 / 40%);
+        
+    }
+`
